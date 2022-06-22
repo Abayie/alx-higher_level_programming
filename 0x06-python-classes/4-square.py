@@ -1,35 +1,53 @@
 #!/usr/bin/python3
+"""Square related feature module."""
+
+
 class Square:
-    """ A class that defines a square by its size
-    """
+    """Class that define a Square."""
+
     def __init__(self, size=0):
-        """ Method to initialize the square object
         """
+            Args:
+                size (int): size initializer
+        """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+
+        if size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+
+        self.__size = size
 
     def area(self):
-        """ Method that returns the square are of the object
+        """Compute the area of the Square.
+
+            Returns:
+                The area. An (integer)
         """
+
         return (self.__size ** 2)
 
     @property
     def size(self):
-        """ Method to returns the size value
-        """
+        """__size property getter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """ Method to set the size value of the square object
+        """__size property setter.
+
+            Args:
+                value (int): new size value
+
+            Raises:
+                TypeError: if `value` is not an integer
+                ValueError: if `value` is < 0
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+
+        self.__size = value
