@@ -127,3 +127,4 @@ if __name__ == "__main__":
     for sol in solutions:
         print(sol)
 
+
