@@ -47,3 +47,4 @@ def parse_stdin_and_compute():
 
 
 parse_stdin_and_compute()
+
