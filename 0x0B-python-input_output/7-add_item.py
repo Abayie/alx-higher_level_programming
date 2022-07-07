@@ -28,3 +28,4 @@ except FileNotFoundError:
     existing_content = []
 
 save_to_json_file(existing_content + argv[1:], filename)
+
